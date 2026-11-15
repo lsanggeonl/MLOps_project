@@ -1,0 +1,49 @@
+{
+    "analysis_id": "49a3831d03c1",
+    "created_at": "2026-08-31 09:31:10",
+    "original_filename": "1000017099.jpg",
+    "model": "best.pt",
+    "representative_result": "rotten",
+    "representative_display": "부패",
+    "detections": [
+        {
+            "object_id": 1,
+            "class_id": 3,
+            "class_name": "rotten",
+            "confidence": 0.881746,
+            "bbox": [
+                717.68,
+                527.22,
+                1461.93,
+                909.81
+            ]
+        },
+        {
+            "object_id": 2,
+            "class_id": 3,
+            "class_name": "rotten",
+            "confidence": 0.797766,
+            "bbox": [
+                791.53,
+                58.92,
+                1436.27,
+                394.23
+            ]
+        }
+    ],
+    "recommendation": {
+        "title": "섭취하지 않는 것을 권장해요. ⚠️",
+        "description": "모델이 부패 상태로 판단했습니다. 실제 섭취 여부는 곰팡이, 냄새 등 실제 상태도 확인해야 합니다.",
+        "cooking": [
+            "섭취용 조리는 권장하지 않습니다."
+        ],
+        "eating": [
+            "곰팡이가 보이면 폐기하세요.",
+            "이상한 냄새가 난다면 섭취하지 마세요."
+        ],
+        "facts": [
+            "AI의 분류 결과만으로 식품의 안전성을 확정할 수는 없습니다.",
+            "부패가 의심되는 식품은 섭취하지 않는 것이 안전합니다."
+        ]
+    }
+}

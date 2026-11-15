@@ -1,0 +1,41 @@
+{
+    "analysis_id": "96016b76209b",
+    "created_at": "2026-08-20 15:49:32",
+    "original_filename": "1000017039.jpg",
+    "model": "best.pt",
+    "representative_result": "ripe",
+    "representative_display": "적숙",
+    "detections": [
+        {
+            "object_id": 1,
+            "class_id": 1,
+            "class_name": "ripe",
+            "confidence": 0.805393,
+            "bbox": [
+                150.17,
+                526.11,
+                828.46,
+                1520.05
+            ]
+        }
+    ],
+    "recommendation": {
+        "title": "지금이 맛있게 먹기 좋은 상태예요! 😋",
+        "description": "단맛과 식감의 균형이 좋은 상태로 판단됩니다.",
+        "cooking": [
+            "바나나 우유",
+            "바나나 스무디",
+            "팬케이크 토핑",
+            "요거트 토핑"
+        ],
+        "eating": [
+            "그대로 먹기",
+            "요거트와 함께 먹기",
+            "시리얼이나 오트밀에 곁들이기"
+        ],
+        "facts": [
+            "바나나는 숙성이 진행될수록 일반적으로 단맛이 강해집니다.",
+            "숙성 과정에서 엽록소가 감소하면서 껍질이 노란색으로 변합니다."
+        ]
+    }
+}
