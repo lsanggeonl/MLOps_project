@@ -1,0 +1,88 @@
+---------------------------------------------메모
+banana_pwa-api/
+│
+├── backend/
+│   │
+│   ├── main.py
+│   ├── config.py
+│   ├── requirements.txt
+│   ├── .env
+│   │
+│   ├── database/
+│   │   ├── __init__.py
+│   │   ├── database.py
+│   │   └── base.py
+│   │
+│   ├── models/
+│   │   ├── __init__.py
+│   │   └── prediction.py
+│   │
+│   ├── routers/
+│   │   ├── __init__.py
+│   │   ├── prediction.py
+│   │   └── history.py
+│   │
+│   ├── services/
+│   │   ├── __init__.py
+│   │   └── yolo_service.py
+│   │
+│   └── storage/
+│       ├── uploads/
+│       └── results/
+│
+└── frontend/
+    │
+    ├── index.html
+    ├── manifest.json
+    ├── sw.js
+    ├── css/
+    │   └── style.css
+    │
+    └── js/
+        └── app.js
+
+
+가상환경 생성
+cd banana_pwa-api
+python3 -m venv venv
+
+가상환경 진입
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\venv\Scripts\Activate.ps1
+
+라이브러리 설치
+pip install fastapi uvicorn sqlalchemy psycopg2-binary python-multipart python-dotenv "pwdlib[argon2]"
+python -m pip install "pydantic[email]"
+
+백엔드 실행
+cd c:\Users\User\Downloads\banana_pwa-api\backend
+python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+cloudflared tunnel --url http://localhost:8000 --protocol http2             #휴대폰에서도 접속할 수 있도록 구동
+
+프론트 실행
+cd c:\Users\User\Downloads\banana_pwa-api\frontend
+python -m http.server 5173 --bind 0.0.0.0
+cloudflared tunnel --url http://localhost:5173 --protocol http2             #휴대폰에서도 접속할 수 있도록 구동
+
+브라우저 주소
+http://127.0.0.1:5500/index.html
+
+
+PostgreSQL에 접속 하는 방법
+& "C:\Program Files\PostgreSQL\18\bin\psql.exe" -U postgres -d banana_db -h localhost 
+-U postgres -d banana_db
+
+db정보
+db: banana_db
+id: postgres
+password: 1111
+table : prediction
+
+
+
+
+cloudflared tunnel --url http://localhost:8000
+---------------------------------------------명령어
+
+
+---------------------------------------------파일(코드)
